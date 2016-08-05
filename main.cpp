@@ -24,7 +24,6 @@
 #include "reductions.hpp"
 #include "bafna_et_al.hpp"
 #include "branch_algo.hpp"
-#include "becker_et_al.hpp"
 
 
 void split_string_on_white_space(const std::string &s, char delim,
