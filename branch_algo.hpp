@@ -61,7 +61,8 @@ public:
         }
         bestSoFar.clear();
         F.clear();
-        largeWeight = std::numeric_limits<int>::max();
+        //largeWeight = std::numeric_limits<int>::max();
+        largeWeight = g.nodeCountOriginal() * 4;
         bestSoFarSize = largeWeight;
     }
     
@@ -70,11 +71,11 @@ public:
     }
     
     void execute(Graph &g, ComponentFinder& cf, FvsOptimizer& optimizer, time_t start ) {
-        time_t now;
-        time(&now);
-        if( difftime(now, start) >= 29*60 ) {
-            throw 0;
-        }
+        //time_t now;
+        //time(&now);
+        //if( difftime(now, start) >= 29*60 ) {
+        //    throw 0;
+        //}
         
         
         if( cf.isForest(g) ) {
